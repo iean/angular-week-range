@@ -1,0 +1,6 @@
+<p><b> Start : </b> {{ startOfWeek | date: 'EEE, dd.MM.YYYY' }}</p>
+<p><b> END : </b> {{ endOfWeek | date: 'EEE, dd.MM.YYYY' }}</p>
+
+<div *ngFor="let date of weekStartDays">
+  <p><b> DATE : </b> {{ date | date: 'EEE, dd.MM.YYYY' }}</p>
+</div>
