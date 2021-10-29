@@ -68,14 +68,11 @@ export class AppComponent implements OnInit {
       let endDateFirstDayOfWeek =
         endDate.getDate() - endDate.getDay() + weekDay;
 
-      while (true) {
-        rangeDate.setDate(rangeDate.getDate() + 7);
-        if (rangeDate > endDate) {
-          break;
-        }
+      while (rangeDate <= endDate) {
         if (rangeDate >= startDate && rangeDate <= endDate) {
           this.weekStartDays.push(rangeDate);
         }
+        rangeDate.setDate(rangeDate.getDate() + 7);
       }
     }
   }
